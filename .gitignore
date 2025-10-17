@@ -1,0 +1,10 @@
+# Credentials
+.env
+secrets/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Volume data
+/home/*/data/
