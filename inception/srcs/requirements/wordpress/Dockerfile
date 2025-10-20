@@ -20,7 +20,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-
 RUN mkdir -p ${WP_PATH} /run/php
 
 # Copy config and tools
-COPY conf/www.conf /tmp/www.conf
+COPY conf/www.config /tmp/www.conf
 COPY tools/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Place php-fpm pool config according to installed PHP version
