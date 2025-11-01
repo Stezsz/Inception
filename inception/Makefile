@@ -6,7 +6,7 @@
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:34:51 by strodrig          #+#    #+#              #
-#    Updated: 2025/11/01 15:48:49 by strodrig         ###   ########.fr        #
+#    Updated: 2025/11/01 15:57:45 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME		= inception
 
 # Docker Compose file
-COMPOSE		= srcs/docker compose.yml
+COMPOSE		= srcs/docker-compose.yml
 
 # Data directories
 DATA_DIR	= /home/strodrig/data
