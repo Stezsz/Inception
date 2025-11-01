@@ -6,7 +6,7 @@
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:34:51 by strodrig          #+#    #+#              #
-#    Updated: 2025/11/01 15:43:09 by strodrig         ###   ########.fr        #
+#    Updated: 2025/11/01 15:48:49 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME		= inception
 
 # Docker Compose file
-COMPOSE		= srcs/docker-compose.yml
+COMPOSE		= srcs/docker compose.yml
 
 # Data directories
 DATA_DIR	= /home/strodrig/data
@@ -42,19 +42,19 @@ setup:
 # Build and start containers
 up: setup
 	@printf "$(CURSIVE)$(GRAY)Building and starting containers...$(RESET)\n"
-	@docker-compose -f $(COMPOSE) up -d --build
+	@docker compose -f $(COMPOSE) up -d --build
 	@printf "$(GREEN)✓ Containers are running$(RESET)\n"
 
 # Start containers (without building)
 start:
 	@printf "$(CURSIVE)$(GRAY)Starting containers...$(RESET)\n"
-	@docker-compose -f $(COMPOSE) start
+	@docker compose -f $(COMPOSE) start
 	@printf "$(GREEN)✓ Containers started$(RESET)\n"
 
 # Stop containers
 stop:
 	@printf "$(CURSIVE)$(GRAY)Stopping containers...$(RESET)\n"
-	@docker-compose -f $(COMPOSE) stop
+	@docker compose -f $(COMPOSE) stop
 	@printf "$(YELLOW)✓ Containers stopped$(RESET)\n"
 
 # Restart containers
@@ -64,21 +64,21 @@ restart: stop start
 # Stop and remove containers
 down:
 	@printf "$(CURSIVE)$(GRAY)Stopping and removing containers...$(RESET)\n"
-	@docker-compose -f $(COMPOSE) down
+	@docker compose -f $(COMPOSE) down
 	@printf "$(YELLOW)✓ Containers removed$(RESET)\n"
 
 # Show container status
 status:
-	@docker-compose -f $(COMPOSE) ps
+	@docker compose -f $(COMPOSE) ps
 
 # Show logs
 logs:
-	@docker-compose -f $(COMPOSE) logs -f
+	@docker compose -f $(COMPOSE) logs -f
 
 # Clean everything (containers, volumes, images)
 clean: down
 	@printf "$(CURSIVE)$(GRAY)Removing volumes and images...$(RESET)\n"
-	@docker-compose -f $(COMPOSE) down -v --rmi all
+	@docker compose -f $(COMPOSE) down -v --rmi all
 	@printf "$(YELLOW)✓ Docker cleanup complete$(RESET)\n"
 
 # Full clean (including data directories)
