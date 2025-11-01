@@ -6,7 +6,7 @@
 #    By: strodrig <strodrig@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/17 11:34:51 by strodrig          #+#    #+#              #
-#    Updated: 2025/10/20 00:00:00 by strodrig         ###   ########.fr        #
+#    Updated: 2025/11/01 15:43:09 by strodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,17 +93,17 @@ re: fclean all
 
 # Show help
 help:
-	@echo "$(GREEN)Inception Makefile Commands:$(RESET)"
-	@echo "  $(YELLOW)make$(RESET) or $(YELLOW)make all$(RESET)     - Setup and start all containers"
-	@echo "  $(YELLOW)make up$(RESET)              - Build and start containers"
-	@echo "  $(YELLOW)make start$(RESET)           - Start stopped containers"
-	@echo "  $(YELLOW)make stop$(RESET)            - Stop running containers"
-	@echo "  $(YELLOW)make restart$(RESET)         - Restart containers"
-	@echo "  $(YELLOW)make down$(RESET)            - Stop and remove containers"
-	@echo "  $(YELLOW)make status$(RESET)          - Show container status"
-	@echo "  $(YELLOW)make logs$(RESET)            - Show and follow container logs"
-	@echo "  $(YELLOW)make clean$(RESET)           - Remove containers, volumes and images"
-	@echo "  $(YELLOW)make fclean$(RESET)          - Full cleanup including data directories"
-	@echo "  $(YELLOW)make re$(RESET)              - Rebuild everything from scratch"
+	@echo "Inception Makefile Commands:"
+	@echo "  make or make all    - Setup and start all containers"
+	@echo "  make up              - Build and start containers"
+	@echo "  make start           - Start stopped containers"
+	@echo "  make stop            - Stop running containers"
+	@echo "  make restart         - Restart containers"
+	@echo "  make down            - Stop and remove containers"
+	@echo "  make status          - Show container status"
+	@echo "  make logs            - Show and follow container logs"
+	@echo "  make clean           - Remove containers, volumes and images"
+	@echo "  make fclean         - Full cleanup including data directories"
+	@echo "  make re              - Rebuild everything from scratch"
 
 .PHONY: all setup up start stop restart down status logs clean fclean re help
